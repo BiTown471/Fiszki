@@ -1,7 +1,5 @@
-package fiszki.pl.Fiszki;
+package pl.fiszki.Fiszki;
 
-import fiszki.pl.Fiszki.model.Levels;
-import fiszki.pl.Fiszki.repository.LevelsRepository;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -9,8 +7,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class FiszkiApplication {
 
 	public static void main(String[] args) {
+
 		SpringApplication.run(FiszkiApplication.class, args);
-
-
 	}
+
 }
