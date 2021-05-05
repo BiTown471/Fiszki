@@ -26,15 +26,6 @@ public class Flashcard {
     public Flashcard() {
     }
 
-    public Flashcard(Long id, EnglishWord englishWord, PolishWord polishWord, PartOfSpeech partOfSpeech, Topic topic, Level level) {
-        this.id = id;
-        this.englishWord = englishWord;
-        this.polishWord = polishWord;
-        this.partOfSpeech = partOfSpeech;
-        this.topic = topic;
-        this.level = level;
-    }
-
     public Topic getTopic() {
         return topic;
     }

@@ -1,20 +1,42 @@
-insert into levels value(1,"A1");
-insert into levels value(2,"A2");
-insert into levels value(3,"B1");
-insert into levels value(4,"B2");
-insert into levels value(5,"C1");
-insert into levels value(6,"C2");
-insert into topics value(null,"Home");
-insert into topics value(null,"Eat");
-insert into parts_of_speech value(null,"noun");
-insert into parts_of_speech value(null,"verb");
-insert into english_word value(null,"window","");
-insert into english_word value(null,"door","");
-insert into english_word value(null,"room","");
-insert into english_word value(null,"bed","");
-insert into english_word value(null,"apple","");
-insert into polish_word value(null,"okno","");
-insert into polish_word value(null,"drzwi","");
-insert into polish_word value(null,"lozko","");
-insert into polish_word value(null,"jablko","");
-insert into polish_word value(null,"zamek","");
+insert into level value(1,"A1");
+insert into level value(2,"A2");
+insert into level value(3,"B1");
+insert into level value(4,"B2");
+insert into level value(5,"C1");
+insert into level value(6,"C2");
+
+insert into topic value(null,"Home");
+insert into topic value(null,"Eat");
+
+insert into part_of_speech value(null,"noun");
+insert into part_of_speech value(null,"verb");
+
+insert into english_word value(null,"I always open window on morning.","window");
+insert into english_word value(null,"","door");
+insert into english_word value(null,"","room");
+insert into english_word value(null,"","bed");
+insert into english_word value(null,"Mia have 3 apples","apple");
+insert into english_word value(null,"king's house","castle");
+insert into english_word value(null,"You can't sell this bicycle just for nothing!","to sell");
+insert into english_word value(null,"Tell the waiter to take these glasses away","to take sth away");
+insert into english_word value(null,"We're saving money","to save");
+
+insert into polish_word value(null,"Zawsze rano otwieram okno.","okno");
+insert into polish_word value(null,"","drzwi");
+insert into polish_word value(null,"","lozko");
+insert into polish_word value(null,"Mia ma 3 jabłka","jablko");
+insert into polish_word value(null,"","zamek");
+insert into polish_word value(null,"Nie możesz sprzedać tego roweru za bezcen!","sprzedać coś");
+insert into polish_word value(null,"Powiedz kelnerowi,żeby zabrał te kieliszki.","zabrać coś");
+insert into polish_word value(null,"Oszczędzamy pieniądze.","oszczędzać");
+
+
+
+insert into flashcards value(null,1,1,1,1,1);
+insert into flashcards value(null,2,1,1,1,1);
+insert into flashcards value(null,4,1,1,3,1);
+insert into flashcards value(null,5,1,1,4,1);
+insert into flashcards value(null,6,1,1,5,1);
+insert into flashcards value(null,7,2,1,6,1);
+insert into flashcards value(null,8,2,1,7,1);
+insert into flashcards value(null,9,2,1,8,1);
