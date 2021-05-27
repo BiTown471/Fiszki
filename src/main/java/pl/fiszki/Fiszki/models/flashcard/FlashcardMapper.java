@@ -9,7 +9,7 @@ public class FlashcardMapper {
         flashcardDto.setEnglishWord(flashcard.getEnglishWord().getName());
         flashcardDto.setEnglishWordDesc(flashcard.getEnglishWord().getDescription());
         flashcardDto.setPolishWord(flashcard.getPolishWord().getName());
-        flashcardDto.setPolishWordDesc(flashcard.getPolishWord().getDescryption());
+        flashcardDto.setPolishWordDesc(flashcard.getPolishWord().getDescription());
         flashcardDto.setPartOfSpeech(flashcard.getPartOfSpeech().getName());
         flashcardDto.setTopic(flashcard.getTopic().getName());
         flashcardDto.setLevel(flashcard.getLevel().getName());

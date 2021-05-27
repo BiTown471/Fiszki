@@ -7,20 +7,26 @@ import javax.persistence.*;
 public class Flashcard {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id",updatable = false)
     private Long id;
-    @ManyToOne
+
+    @ManyToOne(cascade = {CascadeType.ALL})
     @JoinColumn(name = "englisz_word_id")
     private EnglishWord englishWord;
-    @ManyToOne
+
+    @ManyToOne(cascade = {CascadeType.ALL})
     @JoinColumn(name = "polisz_word_id")
     private PolishWord polishWord;
-    @ManyToOne
+
+    @ManyToOne(cascade = {CascadeType.ALL})
     @JoinColumn(name = "part_of_speech_id")
     private PartOfSpeech partOfSpeech;
-    @ManyToOne
+
+    @ManyToOne(cascade = {CascadeType.ALL})
     @JoinColumn(name = "topic_id")
     private Topic topic;
-    @ManyToOne
+
+    @ManyToOne(cascade = {CascadeType.ALL})
     @JoinColumn(name = "level_id")
     private Level level;
     public Flashcard() {
@@ -72,5 +78,17 @@ public class Flashcard {
 
     public void setEnglishWord(EnglishWord englishWord) {
         this.englishWord = englishWord;
+    }
+
+    @Override
+    public String toString() {
+        return "Flashcard{" +
+                "id=" + id +
+                ", englishWord=" + englishWord +
+                ", polishWord=" + polishWord +
+                ", partOfSpeech=" + partOfSpeech +
+                ", topic=" + topic +
+                ", level=" + level +
+                '}';
     }
 }

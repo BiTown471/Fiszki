@@ -8,7 +8,10 @@ public class PolishWord {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Column(length = 20)
+    @Column(
+            length = 20,
+            nullable = false
+    )
     private String name;
     @Column
     private String description;
@@ -38,12 +41,20 @@ public class PolishWord {
         this.name = name;
     }
 
-    public String getDescryption() {
+    public String getDescription() {
         return description;
     }
 
-    public void setDescryption(String description) {
+    public void setDescription(String description) {
         this.description = description;
     }
 
+    @Override
+    public String toString() {
+        return "PolishWord{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", description='" + description + '\'' +
+                '}';
+    }
 }

@@ -8,7 +8,9 @@ public class EnglishWord {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Column(length = 20)
+    @Column(
+            length = 20,
+            nullable = false)
     private String name;
     @Column
     private String description;
@@ -16,10 +18,13 @@ public class EnglishWord {
     public EnglishWord() {
     }
 
-    public EnglishWord(Long id, String name, String description) {
-        this.id = id;
+    public EnglishWord(String name, String description) {
         this.name = name;
         this.description = description;
+    }
+
+    public EnglishWord(String name) {
+        this.name = name;
     }
 
     public Long getId() {
@@ -44,5 +49,14 @@ public class EnglishWord {
 
     public void setDescription(String descryption) {
         this.description = descryption;
+    }
+
+    @Override
+    public String toString() {
+        return "EnglishWord{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", description='" + description + '\'' +
+                '}';
     }
 }

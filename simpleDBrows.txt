@@ -6,7 +6,7 @@ insert into level value(5,"C1");
 insert into level value(6,"C2");
 
 insert into topic value(null,"Home");
-insert into topic value(null,"Eat");
+insert into topic value(null,"Food");
 
 insert into part_of_speech value(null,"noun");
 insert into part_of_speech value(null,"verb");
@@ -33,7 +33,7 @@ insert into polish_word value(null,"Oszczędzamy pieniądze.","oszczędzać");
 
 
 insert into flashcards value(null,1,1,1,1,1);
-insert into flashcards value(null,2,1,1,1,1);
+insert into flashcards value(null,2,1,1,2,1);
 insert into flashcards value(null,4,1,1,3,1);
 insert into flashcards value(null,5,1,1,4,1);
 insert into flashcards value(null,6,1,1,5,1);
