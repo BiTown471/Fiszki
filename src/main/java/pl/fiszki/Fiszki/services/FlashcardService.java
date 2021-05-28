@@ -5,9 +5,9 @@ import org.springframework.stereotype.Service;
 import pl.fiszki.Fiszki.models.Flashcard;
 import pl.fiszki.Fiszki.models.flashcard.FlashcardDto;
 import pl.fiszki.Fiszki.models.flashcard.FlashcardMapper;
+import pl.fiszki.Fiszki.repositories.EnglishWordRepository;
 import pl.fiszki.Fiszki.repositories.FlashcardRepository;
 
-import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 
@@ -15,10 +15,12 @@ import java.util.Random;
 public class FlashcardService {
 
     private final FlashcardRepository flashcardRepository;
+    private final EnglishWordRepository englishWordRepository;
 
     @Autowired
-    public FlashcardService(FlashcardRepository flashcardRepository) {
+    public FlashcardService(FlashcardRepository flashcardRepository, EnglishWordRepository englishWordRepository) {
         this.flashcardRepository = flashcardRepository;
+        this.englishWordRepository = englishWordRepository;
     }
 
     public List<Flashcard> getFlashcardsList(){

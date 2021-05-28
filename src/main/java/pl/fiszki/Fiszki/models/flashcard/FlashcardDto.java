@@ -10,6 +10,19 @@ public class FlashcardDto {
     private String topic;
     private String level;
 
+    public FlashcardDto() {
+    }
+
+    public FlashcardDto(String englishWord, String englishWordDesc, String polishWord, String polishWordDesc, String partOfSpeech, String topic, String level) {
+        this.englishWord = englishWord;
+        this.englishWordDesc = englishWordDesc;
+        this.polishWord = polishWord;
+        this.polishWordDesc = polishWordDesc;
+        this.partOfSpeech = partOfSpeech;
+        this.topic = topic;
+        this.level = level;
+    }
+
     public Long getId() {
         return id;
     }
@@ -72,5 +85,19 @@ public class FlashcardDto {
 
     public void setLevel(String level) {
         this.level = level;
+    }
+
+    @Override
+    public String toString() {
+        return "FlashcardDto{" +
+                "id=" + id +
+                ", englishWord='" + englishWord + '\'' +
+                ", englishWordDesc='" + englishWordDesc + '\'' +
+                ", polishWord='" + polishWord + '\'' +
+                ", polishWordDesc='" + polishWordDesc + '\'' +
+                ", partOfSpeech='" + partOfSpeech + '\'' +
+                ", topic='" + topic + '\'' +
+                ", level='" + level + '\'' +
+                '}';
     }
 }
