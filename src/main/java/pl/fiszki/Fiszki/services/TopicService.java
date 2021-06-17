@@ -24,4 +24,11 @@ public class TopicService {
     public void addTopic(Topic topic) {
         topicRepository.save(topic);
     }
+
+    public void remove(Long id) {
+        if (!topicRepository.existsById(id)){
+            throw new  IllegalStateException("Topic not exist.");
+        }
+        topicRepository.deleteById(id);
+    }
 }

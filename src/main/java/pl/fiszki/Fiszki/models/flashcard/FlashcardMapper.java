@@ -15,4 +15,5 @@ public class FlashcardMapper {
         flashcardDto.setLevel(flashcard.getLevel().getName());
         return flashcardDto;
     }
+
 }

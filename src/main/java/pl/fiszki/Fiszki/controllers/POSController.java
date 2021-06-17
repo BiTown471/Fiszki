@@ -23,12 +23,12 @@ public class POSController {
         this.posService = posService;
     }
 
-    @GetMapping("/part-of-speech")
+    @GetMapping("/partofspeech")
     public List<PartOfSpeech> getAll(){
         return posService.getAll();
     }
 
-    @PostMapping("/part-of-speech")
+    @PostMapping("/partofspeech")
     public void addPos(PartOfSpeech pos){
         posService.addPos(pos);
     }

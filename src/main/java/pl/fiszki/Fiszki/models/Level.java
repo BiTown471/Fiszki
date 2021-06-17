@@ -34,6 +34,7 @@ public class Level {
         this.name = name;
     }
 
+
     @Override
     public String toString() {
         return "Level{" +
@@ -41,4 +42,5 @@ public class Level {
                 ", name='" + name + '\'' +
                 '}';
     }
+
 }

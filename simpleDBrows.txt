@@ -1,4 +1,4 @@
-insert into level value(null,"");
+
 insert into level value(null,"A1");
 insert into level value(null,"A2");
 insert into level value(null,"B1");
@@ -6,11 +6,10 @@ insert into level value(null,"B2");
 insert into level value(null,"C1");
 insert into level value(null,"C2");
 
-insert into topic value(null,"");
 insert into topic value(null,"Home");
 insert into topic value(null,"Food");
 
-insert into part_of_speech value(null,"");
+
 insert into part_of_speech value(null,"noun");
 insert into part_of_speech value(null,"verb");
 

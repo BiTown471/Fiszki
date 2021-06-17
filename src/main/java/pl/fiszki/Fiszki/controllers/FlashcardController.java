@@ -1,5 +1,6 @@
 package pl.fiszki.Fiszki.controllers;
 
+import javassist.NotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -21,20 +22,30 @@ public class FlashcardController {
         this.flashcardService = flashcardService;
     }
 
-    @GetMapping("/flashcards")
-    public List<Flashcard> getAll(){
+    @GetMapping("/flashcard")
+    public List<FlashcardDto> getAll(){
         return flashcardService.getFlashcardsList();
     }
 
-    @GetMapping("/one-flashcard")
+    @GetMapping(path ="/flashcard/{id}")
+    public FlashcardDto getFlashcardById(@PathVariable Long id){
+        return flashcardService.getFlashcardById(id);
+    }
+
+    @GetMapping(path ="/flashcard/topic/{id}")
+    public List<FlashcardDto> getFlashcardByTopicId(@PathVariable Long id){
+        return flashcardService.getFlashcardByTopicId(id);
+    }
+
+
+    @GetMapping("/oneflashcard")
     public FlashcardDto getOne(){return flashcardService.getRandomFlashcard();}
 
-    @PostMapping("flashcard")
-    public ResponseEntity addFlashcard(FlashcardDto flashcardDto){
-        //flashcardService.addFlashcard(flashcard);
-        System.out.println(flashcardDto.toString());
-        return ResponseEntity.ok(HttpStatus.OK);
+    @PostMapping("flashcard/")
+    public void addFlashcard(FlashcardDto flashcardDto){
+        flashcardService.addFlashcard(flashcardDto);
     }
+
 
     @DeleteMapping(path = "/flashcard/{id}")
     public void  deletePolishWord(@PathVariable Long id){
